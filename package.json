@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "build": "gatsby build",
     "develop": "env-cmd -f .env gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
@@ -26,6 +27,7 @@
   },
   "devDependencies": {
     "env-cmd": "^9.0.2",
+    "gh-pages": "^2.0.1",
     "prettier": "^1.17.1"
   },
   "repository": {
