@@ -2,6 +2,9 @@ import React from 'react'
 import {graphql} from 'gatsby'
 import Layout from '../components/layout'
 
+
+import "katex/dist/katex.min.css"
+
 export const query = graphql`
 
 	query($slug: String!){
@@ -19,7 +22,6 @@ export const query = graphql`
 `
 
 const Blog = (props) => {
-
 	return(
 		<Layout>
 			<h1>{props.data.markdownRemark.frontmatter.title}</h1>

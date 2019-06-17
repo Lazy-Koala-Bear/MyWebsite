@@ -13,6 +13,16 @@ module.exports = {
   },
 
   plugins: [
+
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // replace "UA-XXXXXXXXX-X" with your own Tracking ID
+        trackingId: "UA-141814063-1",
+        head: true,
+      },
+    },
+
     'gatsby-plugin-sass',
     {
       resolve:'gatsby-source-filesystem',
@@ -26,12 +36,19 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          'gatsby-remark-copy-linked-files',
             'gatsby-remark-relative-images',
             {
               resolve: 'gatsby-remark-images',
               options: {
                 maxWidth: 750,
                 linkImagesToOriginal: false
+              }
+            },
+            {
+              resolve: `gatsby-remark-katex`,
+              options: {
+                strict: `ignore`
               }
             }
           ]
