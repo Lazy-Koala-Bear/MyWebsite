@@ -1,8 +1,8 @@
 ---
 title: "Do you even know cross entropy?"
-date: "06-04-2019"
+date: "2019-06-01"
+tags: ["cross entropy", "entropy", "machine learning", "math"]
 ---
-
 Ok so this is a bit embarrassing. A friend asked me this question when explaining some concepts in this Big Data class I was taking at the time. Although I have learned entropy in my physics, computer engineering, and probability classes, I was unable to explain what it was exactly. Honestly, the thought of entropy, cross entropy, and KL divergence used to scare me...it just sounds so technical. However, engineers just love to make easy things seem difficult!
 
 ## Entropy
@@ -44,6 +44,8 @@ Let's calculate the entropy for the above distribution y:
 
 $$ entropy(y) = \sum\nolimits_{} y_i log {1\over y_i} $$
 
+$$ entropy(y) = y_x \cdot log {1\over y_x} + y_y \cdot log {1\over y_y} + y_z \cdot log {1\over y_z} $$
+
 $$ entropy(y) = 0.2 \cdot log {1\over 0.2} + 0.3 \cdot log {1\over 0.3} + 0.5 \cdot log {1\over 0.5} $$
 
 $$ entropy(y) = 0.2 \cdot 2.32 + 0.3 \cdot 1.74 + 0.5 \cdot 1 $$
@@ -65,6 +67,8 @@ You see that the only difference between the entropy equation and the cross entr
 
 $$ crossEntropy(y, x) = \sum\nolimits_{} y_i log {1\over x_i} $$
 
+$$ crossEntropy(y, x) = y_x \cdot log {1\over x_x} + y_y \cdot log {1\over x_y} + y_z \cdot log {1\over x_z} $$
+
 $$ crossEntropy(y, x) = 0.2 \cdot log {1\over 0.2} + 0.3 \cdot log {1\over 0.5} + 0.5 \cdot log {1\over 0.3} $$
 
 $$ crossEntropy(y, x) = 0.2 \cdot 2.32 + 0.3 \cdot 1 + 0.5 \cdot 1.74 $$
@@ -78,3 +82,11 @@ $$ crossEntropy(y, x) = 1.634 $$
 Stands for _Kullback-Leibler divergence_, which is literally just the difference between cross entropy and entropy. Remember, cross entropy is always greater or equal to entropy and it's shown in the example above. Basically, KL divergence means how much _extra_ bits is used if distribution x is used, rather than distribution y. In a more general sense, it is a measure of how a probability distribution differs from another probability distribution.
 
 $$D_{KL}(y, x) = crossEntropy(y,x) - entropy(y) = 1.634 - 1.486$$
+
+## Conclusion
+
+I was asked by a kind viewer: why should we understand entropy/cross entropy? And what are some practical applications? Well, below is my response:
+
+The "entropy" described in the post is really entropy relating to information theory, thanks to Claude Shannon. A practical situation would be the original problem Claude Shannon was trying to solve, which is: what is the most efficient way to send messages without losing information? The efficiency described here would be the average message length. So given a distribution with random variables (X, Y, Z, ...), the least amount of bits to encode symbol X (a type of message) would be log(1/probability(X)). Then a good feature to summarize/quantify this information would be "entropy," which is the smallest possible average size of lossless encoding of the messages. But really, I think about "entropy" as a characteristic of a distribution. It tells me something about the distribution, for example, if the entropy of a message distribution is high (the average number of bits is large), then this entropy tells me that there is uncertainty or unpredictability of the next message. Inversely, low entropy tells me that the next message is predicable, so there is less disorder.
+
+But more importantly, I think understanding entropy this way helps me understand cross entropy, which is very important in creating and training models for machine learning. For example, if a machine learning model outputs a distribution x, but the true distribution is distribution y, then cross entropy tells me how wrong the model is. Therefore, cross entropy is often used as a loss model, and minimizing the cross entropy will help the model "learn."

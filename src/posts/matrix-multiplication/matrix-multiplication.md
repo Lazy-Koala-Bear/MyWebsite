@@ -1,8 +1,8 @@
 ---
 title: "Matrix Multiplication is Parallel"
-date: "06-17-2019"
+date: "2019-06-17"
+tags: ["deep learning","matrix multiplication", "math"]
 ---
-
 Everyone knows how to compute matrix multiplication. But what are we exactly doing with this operation? I want to introduce my way of viewing matrix multiplication, a way that is intuitively parallel.
 
 I was introduced to this view of matrix multiplication, inadvertently, when I was writing a backwards pass for a deep learning model. If you have ever written one from scratch, you might understand the amount of reshape, transpose, and summing necessary to manipulate the tensors so that the dimensions match. At first, I was able to get one sample, a 1d feature vector, to work with the backwards pass to calculate the change in gradients, a tensor. After that, I started to implement mini batch gradient decent, which means that the operations done on each sample of the mini batch are the same, but I just had to sum up all the tensors produced by each sample to find the total change in gradients produced by each mini batch. I knew at that point that I can simply use a for loop to sum up the resulting tensors from each sample, but I thought there must be a better way... If you have no idea what I am talking talk, don't worry because it is not important. It is just my reflection of how I got that "ah-ha" moment!

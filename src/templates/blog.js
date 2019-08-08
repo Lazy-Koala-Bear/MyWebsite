@@ -1,6 +1,11 @@
 import React from 'react'
-import {graphql} from 'gatsby'
+import {graphql, Link} from 'gatsby'
 import Layout from '../components/layout'
+import tagStyles from '../styles/tags.module.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTags} from '@fortawesome/free-solid-svg-icons'
+
+import { kebabCase } from 'lodash';
 
 
 import "katex/dist/katex.min.css"
@@ -14,6 +19,7 @@ export const query = graphql`
 			frontmatter{
 				title
 				date
+				tags
 			}
 			html
 		}
@@ -26,6 +32,19 @@ const Blog = (props) => {
 		<Layout>
 			<h1>{props.data.markdownRemark.frontmatter.title}</h1>
 			<p>{props.data.markdownRemark.frontmatter.date}</p>
+			<nav>
+			<ul className={tagStyles.navList}>
+				<p className={tagStyles.tag}> <FontAwesomeIcon icon={faTags} size="xs" /> Tags: </p>
+			  {props.data.markdownRemark.frontmatter.tags.map(tag => (
+
+			    <li key={tag + `tag`}>
+			      <Link className={tagStyles.navItem} activeClassName={tagStyles.activeNavItem} to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+
+			    </li>
+			  ))}
+			</ul>
+			</nav>
+			<hr></hr>
 			<div dangerouslySetInnerHTML = {{ __html: props.data.markdownRemark.html }}></div>
 		</Layout>
 	)

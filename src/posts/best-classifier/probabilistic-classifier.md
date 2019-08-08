@@ -1,8 +1,8 @@
 ---
 title: "Probabilistic Classifier"
-date: "06-12-2019"
+date: "2019-06-12"
+tags: ["machine learning", "image analysis", "classification", "probability"]
 ---
-
 
 Let's talk about classifying things with probability. Probabilistic classifiers and, in particular, the Bayesian classifier, are among the most popular classifiers used in machine learning and increasingly in many applications. These classifiers are derived from a generative probability model, where Bayes rule is used to estimate the conditional probability and then assumptions are made on the model in order to decompose this probability.
 ![](./first.jpg)

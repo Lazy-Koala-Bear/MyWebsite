@@ -1,8 +1,8 @@
 ---
 title: "Image Restoration"
-date: "06-10-2019"
+date: "2019-06-10"
+tags: ["image analysis", "restoration filter", "math"]
 ---
-
 Let's talk about image restoration. It is a fun topic when you understand the intuition.
 
 Say you asked a friend to take a picture of you in front of Lake Geneva. But due to his shaky hands, a blurry bad image was produced.

@@ -22,9 +22,9 @@ const Footer = () => {
 	return(
 
 		<footer className={footerStyles.footer}>
-			<a className={linkStyles.gitItem} activeClassName={linkStyles.activegitItem} href= "https://github.com/Penny-Xu" target="_blank"><FontAwesomeIcon icon={faGithubAlt} size="2x"/> </a>
-			<a className={linkStyles.lItem} activeClassName={linkStyles.activelItem} href= "https://www.linkedin.com/in/penny-xu-421766103/" target="_blank"><FontAwesomeIcon icon={faLinkedin} size="2x"/></a>
-			<a className={linkStyles.instaItem} activeClassName={linkStyles.activeInstaItem} href= "https://www.instagram.com/lazycoalabear/" target="_blank"> <FontAwesomeIcon icon={faInstagram} size="2x"/></a>
+			<a className={linkStyles.gitItem} activeClassName={linkStyles.activegitItem} href= "https://github.com/Penny-Xu" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithubAlt} size="2x"/> </a>
+			<a className={linkStyles.lItem} activeClassName={linkStyles.activelItem} href= "https://www.linkedin.com/in/penny-xu-421766103/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} size="2x"/></a>
+			<a className={linkStyles.instaItem} activeClassName={linkStyles.activeInstaItem} href= "https://www.instagram.com/lazycoalabear/" target="_blank" rel="noopener noreferrer"> <FontAwesomeIcon icon={faInstagram} size="2x"/></a>
 			<p>
 			Created by {data.site.siteMetadata.author}, © 2019
 			</p>
