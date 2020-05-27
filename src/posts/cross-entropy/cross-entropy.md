@@ -1,7 +1,7 @@
 ---
 title: "Do you even know cross entropy?"
 date: "2019-06-01"
-tags: ["cross entropy", "entropy", "machine learning", "math"]
+tags: ["cross entropy", "entropy", "machine learning"]
 ---
 Ok so this is a bit embarrassing. A friend asked me this question when explaining some concepts in this Big Data class I was taking at the time. Although I have learned entropy in my physics, computer engineering, and probability classes, I was unable to explain what it was exactly. Honestly, the thought of entropy, cross entropy, and KL divergence used to scare me...it just sounds so technical. However, engineers just love to make easy things seem difficult!
 

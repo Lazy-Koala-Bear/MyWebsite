@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 import tagStyles from '../styles/tags.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTags} from '@fortawesome/free-solid-svg-icons'
+import { Disqus} from 'gatsby-plugin-disqus'
 
 import { kebabCase } from 'lodash';
 
@@ -29,6 +30,7 @@ export const query = graphql`
 
 const Blog = (props) => {
 	return(
+		<>
 		<Layout>
 			<h1>{props.data.markdownRemark.frontmatter.title}</h1>
 			<p>{props.data.markdownRemark.frontmatter.date}</p>
@@ -46,7 +48,11 @@ const Blog = (props) => {
 			</nav>
 			<hr></hr>
 			<div dangerouslySetInnerHTML = {{ __html: props.data.markdownRemark.html }}></div>
+			<hr></hr>
+			<Disqus/>
 		</Layout>
+
+		</>
 	)
 }
 

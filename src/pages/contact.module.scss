@@ -45,3 +45,20 @@
 .active-insta-item{
   color: #333333;
 }
+
+.button {
+  background-color: #444444;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 8px;
+}
+
+.button:hover{
+  background-color: #FFC0CB;
+}

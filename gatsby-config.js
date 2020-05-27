@@ -23,6 +23,13 @@ module.exports = {
       },
     },
 
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `pennyxu`
+      }
+    },
+
     'gatsby-plugin-sass',
     {
       resolve:'gatsby-source-filesystem',

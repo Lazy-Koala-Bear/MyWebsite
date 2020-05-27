@@ -43,5 +43,13 @@
     color: #777777;
     font-size: .8rem;
     font-style: italic;
+    margin-bottom: 0;
+  }
+  level {
+    position: absolute;
+    right: 300px;
+    font-size: 1rem;
+    margin-bottom: 0;
+    color: #555555;
   }
 }

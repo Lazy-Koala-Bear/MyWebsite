@@ -1,7 +1,7 @@
 ---
 title: "Image Restoration"
 date: "2019-06-10"
-tags: ["image analysis", "restoration filter", "math"]
+tags: ["image analysis", "restoration filter"]
 ---
 Let's talk about image restoration. It is a fun topic when you understand the intuition.
 

@@ -74,8 +74,6 @@ exports.createPages = ({ actions, graphql }) => {
       });
     });
 
-
-
     /// blog BlogList
     // const postsPerPage = 2;
     // const numPages = Math.ceil(posts.length / postsPerPage);

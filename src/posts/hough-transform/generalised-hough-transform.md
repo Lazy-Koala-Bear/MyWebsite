@@ -14,7 +14,7 @@ The generalized Hough Transform, as the name suggests, is really a generalizatio
 
 Let's say I have an image, let's call it the __target image__. Below is an image of me on my flight back to the US from Switzerland. What's a better way to spend the 7 hours than to write about the Hough Transform? :)
 
-![](./original.jpg)
+<img src="./original.jpg" styled="width:10px;"/>
 
 I also have a __template image__. The template is the shape that I want to find in the above image. This template for this example is an upper case E from my cap.
 

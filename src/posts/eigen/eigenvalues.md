@@ -1,7 +1,7 @@
 ---
 title: "Finding eigenvalues proof explained"
 date: "2019-07-26"
-tags: ["eigenvector", "eigenvalue", "math"]
+tags: ["eigenvector", "eigenvalue"]
 ---
 
 Does hearing eigenvalue or eigenvector trigger you? Have you ever solved for one, but didn't know what you were solving? Have you blindlessly used this equation:
@@ -52,7 +52,7 @@ Since the NULL Space of M is not empty, __We can say that $M$ has linearly depen
 
 * $\det(M) = 0$
 
-Ok so here is the crucial portion. First let's understand what taking a determinant of a matrix means. __The determinant of a matrix M is a scalar value that describes by what factor the "area" scales after transformation M is applied__. The "area" is defined by the basis vectors of the original vector space, if we are in $R^2$. If we are in $R^3$, then it would be the delta "volume" defined by the basis vectors. So the determinant of a matrix of$ M$ tells me how the basis vectors of the space are changing after $M$ is applied. For example, the determinant of a matrix is 2, if the "area" changes by a factor of 2.
+Ok so here is the crucial portion. First let's understand what taking a determinant of a matrix means. __The determinant of a matrix M is a scalar value that describes by what factor the "area" scales after transformation M is applied__. The "area" is defined by the basis vectors of the original vector space, if we are in $R^2$. If we are in $R^3$, then it would be the delta "volume" defined by the basis vectors. So the determinant of a matrix of $M$ tells me how the basis vectors of the space are changing after $M$ is applied. For example, the determinant of a matrix is 2, if the "area" changes by a factor of 2.
 
 
 #### example:

@@ -26,7 +26,7 @@ const Footer = () => {
 			<a className={linkStyles.lItem} activeClassName={linkStyles.activelItem} href= "https://www.linkedin.com/in/penny-xu-421766103/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} size="2x"/></a>
 			<a className={linkStyles.instaItem} activeClassName={linkStyles.activeInstaItem} href= "https://www.instagram.com/lazycoalabear/" target="_blank" rel="noopener noreferrer"> <FontAwesomeIcon icon={faInstagram} size="2x"/></a>
 			<p>
-			Created by {data.site.siteMetadata.author}, © 2019
+			Created by {data.site.siteMetadata.author}, © 2020
 			</p>
 		</footer>
 	)

@@ -1,7 +1,7 @@
 ---
 title: "Matrix Multiplication is Parallel"
 date: "2019-06-17"
-tags: ["deep learning","matrix multiplication", "math"]
+tags: ["deep learning","matrix multiplication", "parallelism"]
 ---
 Everyone knows how to compute matrix multiplication. But what are we exactly doing with this operation? I want to introduce my way of viewing matrix multiplication, a way that is intuitively parallel.
 
